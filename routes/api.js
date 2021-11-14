@@ -1340,7 +1340,7 @@ router.get('/textmaker/game', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if(apikeyInput != 'Yuzzu') return res.sendFile(__path + '/views/eror.html')
         if (!theme) return res.json(loghandler.nottheme)
-        if (theme != 'pubg' && theme != 'battlefield') return res.json(loghandler.notheme)
+        if (theme != 'pubg' && theme != 'battlefield' && theme != '8bit') return res.json(loghandler.notheme)
         if (!text) return res.json(loghandler.nottext)
 
         if (theme == 'pubg') {
